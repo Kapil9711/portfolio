@@ -1,0 +1,203 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+:root{
+
+    --padding-left: 1.9rem;
+    --padding-top: 2.2rem;
+    
+    --margin-top:2.5rem;
+
+    --height:3.3rem;
+    --width:9.5rem;
+    --width-fix:27rem;
+
+    --list-margin:calc((100% - (var(--width) * 3 + 2rem)) / 2 );
+
+    --font-size-list:1.6rem;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins;
+    overflow-x: hidden;
+   
+}
+html{
+    font-size:62.5% ;
+}
+
+/* ***********************common******************* */
+
+.padding-u{
+    padding: var(--padding-top) 0 0 var(--padding-left);
+}
+
+.margin-top-u{
+    margin-top: var(--margin-top);
+}
+.margin-bottom-u{
+    margin-bottom: var(--margin-top);
+}
+.width-changer-u {
+    width: var(--width-fix);
+}
+.border-u{
+    border-bottom: 2px solid black;
+}
+
+/* ***************header section************* */
+.header{
+    position: relative;
+}
+.header-div{
+    height: 7.8rem;
+    width: 19rem;
+    display: inline-block;
+}
+.heading{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: inline-block;
+}
+
+.header img{
+position: absolute;
+top: 2.6rem;
+right: 1.6rem;
+}
+
+
+/* *****************main section*********************** */
+
+/* ******** image****** */
+
+.main{
+    width: 100vw;
+}
+
+.main_profile_img{
+    height: 53.2rem;
+    width: 100%;
+    background-size: cover; 
+}
+
+/* ******* content***** */
+
+.main_content_container{
+    width:100%;
+}
+
+
+.list-style-u{
+    
+    width: 100%;
+    list-style-position:inside
+}
+.about_list_item{
+display: inline-block;
+width: var(--width);
+padding-top:var(--height);  
+border: 2px solid black;
+position: relative;
+border-radius: 10rem;
+}
+
+.about_list_item a{
+    text-decoration: none;
+    font-weight: 400;
+    position: absolute;
+    font-size: var(--font-size-list);
+    line-height: 2.4rem;
+    color: #000000;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+ }
+    
+ .about_list_item:not(:last-child){
+    margin-right: var(--list-margin);
+ }
+
+.paragraph-content{
+    font-size: 2rem;
+    font-weight:400 ;
+    line-height: 3rem;      
+}
+
+
+/* ***************************footer ************ */
+
+.footer_list{
+    list-style: none;
+    
+}
+.footer_list li{
+    margin-right: 2rem;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+
+/* **************************media query***************************** */
+
+@media only screen and (min-width: 800px) {
+    :root{
+        --width-fix:50rem;
+        --width:13.7rem;
+        --height:4rem;
+    }
+
+ /* **************header***************** */
+    
+.header-div{
+    border-right: 2px solid black;
+}    
+
+.header img{
+        right: 3rem;
+        width: 3rem;
+}
+
+/* *****************main***************** */
+
+.main{
+
+    position: relative;
+}
+.main_profile_img{
+    position: absolute;
+    width: 40%;
+    right:0px;
+    height: 100%;
+    border-bottom: 2px solid black;
+}
+.main_content_container{
+    width: 60%;
+    border-right: 2px solid black;
+}
+
+/* **************footer****************** */
+
+.footer{
+    position: relative;
+}
+.footer_list{
+    position:absolute;
+    right: 1rem;
+    top: 1.5rem;
+    margin: 0;
+}
+
+}
